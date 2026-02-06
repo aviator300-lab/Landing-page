@@ -1,715 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aviator Game Strategy & Community | Telegram Channel</title>
-    <meta name="description" content="Join our exclusive Telegram community for Aviator game insights, strategies, and winning tips from experienced players.">
-    
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1303218394753271');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1303218394753271&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-    
-    <style>
-        :root {
-            --primary: #0088cc;
-            --primary-dark: #006699;
-            --secondary: #e74c3c;
-            --dark: #1a1a2e;
-            --light: #f8f9fa;
-            --gray: #6c757d;
-            --success: #28a745;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f5f7fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo-icon {
-            margin-right: 10px;
-            color: var(--primary);
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-        
-        .hero-text h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        
-        .hero-text p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-        
-        .hero-image {
-            text-align: center;
-            position: relative;
-        }
-        
-        .game-preview {
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            max-width: 100%;
-            border: 5px solid var(--primary);
-        }
-        
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            background-color: var(--primary);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 136, 204, 0.4);
-        }
-        
-        .cta-button:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 136, 204, 0.6);
-        }
-        
-        .telegram-icon {
-            margin-right: 10px;
-            font-size: 1.5rem;
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 80px 0;
-            background-color: white;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 15px;
-        }
-        
-        .section-title p {
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .feature-card {
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 30px;
-            transition: transform 0.3s ease;
-            border: 1px solid #eaeaea;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-        
-        .feature-icon {
-            background-color: rgba(0, 136, 204, 0.1);
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            color: var(--primary);
-            font-size: 1.8rem;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
-        
-        /* How to Join Section */
-        .how-to-join {
-            padding: 80px 0;
-            background-color: #f8f9fa;
-        }
-        
-        .steps-container {
-            display: flex;
-            flex-direction: column;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .step {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .step-number {
-            background-color: var(--primary);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-right: 25px;
-            flex-shrink: 0;
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            padding: 80px 0;
-            background-color: white;
-        }
-        
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .testimonial-card {
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 30px;
-            border-left: 5px solid var(--primary);
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-        
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: #ddd;
-            margin-right: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: var(--primary);
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 50px 0 20px;
-        }
-        
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        
-        .footer-logo {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: white;
-        }
-        
-        .footer-links {
-            margin: 30px 0;
-        }
-        
-        .footer-links a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            margin: 0 15px;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-        }
-        
-        .copyright {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            width: 100%;
-            color: rgba(255,255,255,0.6);
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .step {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .step-number {
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
-            
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-        }
-        
-        /* Animation for the game preview */
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        
-        .game-preview {
-            animation: pulse 3s infinite ease-in-out;
-        }
-        
-        /* Countdown Timer */
-        .countdown {
-            display: flex;
-            justify-content: center;
-            margin: 30px 0;
-            gap: 15px;
-        }
-        
-        .countdown-item {
-            background-color: white;
-            color: var(--dark);
-            padding: 15px;
-            border-radius: 10px;
-            min-width: 80px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .countdown-value {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-        
-        .countdown-label {
-            font-size: 0.9rem;
-            color: var(--gray);
-        }
-        
-        .disclaimer {
-            background-color: #fff3cd;
-            border-left: 5px solid #ffc107;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 5px;
-            color: #856404;
-        }
-    </style>
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<title>Aviator Learning Community | Telegram</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Join our Telegram community for Aviator game learning and discussion.">
+
+<!-- 🔁 AUTO REDIRECT (3 SECONDS) -->
+<meta http-equiv="refresh" content="3;url=https://t.me/+BOQcac_dvmczNWZl">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1303218394753271');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1303218394753271&ev=PageView&noscript=1"/>
+</noscript>
+
+<style>
+body{
+    margin:0;
+    background:#000;
+    color:#fff;
+    font-family: Arial, sans-serif;
+    text-align:center;
+}
+.wrapper{
+    max-width:420px;
+    margin:auto;
+    padding:60px 15px;
+}
+.title{
+    font-size:28px;
+    font-weight:bold;
+    color:#f5c542;
+    margin-bottom:25px;
+}
+
+/* 🔆 GOLDEN GLOW LOGO */
+.logo{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    border:3px solid #f5c542;
+    margin:0 auto 30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    color:#f5c542;
+    animation: glow 2s infinite;
+}
+
+@keyframes glow{
+    0%{ box-shadow:0 0 5px #f5c542; }
+    50%{ box-shadow:0 0 20px #f5c542, 0 0 40px #ffcc00; }
+    100%{ box-shadow:0 0 5px #f5c542; }
+}
+
+/* 🔆 GOLDEN GLOW BUTTON */
+.btn{
+    display:block;
+    background:#f5c542;
+    color:#000;
+    padding:15px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    margin:20px 0;
+    animation: glowBtn 1.5s infinite;
+}
+
+@keyframes glowBtn{
+    0%{ box-shadow:0 0 10px rgba(245,197,66,0.6); }
+    50%{ box-shadow:0 0 25px rgba(245,197,66,1); }
+    100%{ box-shadow:0 0 10px rgba(245,197,66,0.6); }
+}
+
+.sub{
+    font-size:22px;
+    font-weight:bold;
+    color:#f5c542;
+    margin-top:25px;
+}
+
+.timer{
+    font-size:14px;
+    color:#ccc;
+    margin-top:10px;
+}
+
+.disclaimer{
+    background:#222;
+    color:#ccc;
+    font-size:12px;
+    padding:15px;
+    border-radius:8px;
+    margin-top:35px;
+    line-height:1.6;
+}
+</style>
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <i class="fas fa-rocket logo-icon"></i>
-                    <span>Aviator Insights</span>
-                </div>
-                <div class="header-cta">
-                    <a href="https://t.me/+BOQcac_dvmczNWZl" class="cta-button" id="telegram-btn-header" onclick="fbq('track', 'Lead');">
-                        <i class="fab fa-telegram telegram-icon"></i>
-                        Join Telegram
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
+<div class="wrapper">
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Master Aviator Game with Expert Strategies</h1>
-                    <p>Join our exclusive Telegram community to get daily insights, winning strategies, and real-time game analysis from experienced Aviator players.</p>
-                    
-                    <!-- Countdown Timer -->
-                    <div class="countdown">
-                        <div class="countdown-item">
-                            <div class="countdown-value" id="days">00</div>
-                            <div class="countdown-label">Days</div>
-                        </div>
-                        <div class="countdown-item">
-                            <div class="countdown-value" id="hours">00</div>
-                            <div class="countdown-label">Hours</div>
-                        </div>
-                        <div class="countdown-item">
-                            <div class="countdown-value" id="minutes">00</div>
-                            <div class="countdown-label">Minutes</div>
-                        </div>
-                        <div class="countdown-item">
-                            <div class="countdown-value" id="seconds">00</div>
-                            <div class="countdown-label">Seconds</div>
-                        </div>
-                    </div>
-                    
-                    <a href="https://t.me/+BOQcac_dvmczNWZl" class="cta-button" id="telegram-btn-hero" onclick="fbq('track', 'Lead');">
-                        <i class="fab fa-telegram telegram-icon"></i>
-                        Join Telegram Channel
-                    </a>
-                    
-                    <p style="margin-top: 20px; font-size: 1rem;">1,500+ members already joined!</p>
-                </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Aviator Game Strategy" class="game-preview">
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="title">🚀 AVIATOR SIGNAL FREE</div>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>What You'll Get in Our Telegram Channel</h2>
-                <p>Our community is dedicated to helping players improve their Aviator game strategy and maximize their potential</p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Daily Strategy Updates</h3>
-                    <p>Get daily analysis of game patterns, betting strategies, and risk management techniques from experienced players.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Community Discussions</h3>
-                    <p>Join conversations with other Aviator enthusiasts, share your experiences, and learn from collective insights.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bell"></i>
-                    </div>
-                    <h3>Real-time Alerts</h3>
-                    <p>Receive timely notifications about game opportunities and pattern changes that could affect your strategy.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="logo">🚀AVIATOR🚀</div>
 
-    <!-- How to Join Section -->
-    <section class="how-to-join">
-        <div class="container">
-            <div class="section-title">
-                <h2>How to Join Our Community</h2>
-                <p>Follow these simple steps to become part of our exclusive Aviator Telegram channel</p>
-            </div>
-            
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Click the Join Button</h3>
-                        <p>Click on any "Join Telegram Channel" button on this page. It will redirect you to our Telegram channel.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Join the Channel</h3>
-                        <p>Once on Telegram, click the "Join Channel" button to become a member of our Aviator community.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Access Exclusive Content</h3>
-                        <p>Start receiving daily updates, strategies, and participate in community discussions immediately.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="https://t.me/+BOQcac_dvmczNWZl" class="cta-button" id="telegram-btn-steps" onclick="fbq('track', 'Lead');">
-                    <i class="fab fa-telegram telegram-icon"></i>
-                    Join Now - It's Free!
-                </a>
-            </div>
-        </div>
-    </section>
+    <!-- CTA 1 -->
+    <a href="https://t.me/+BOQcac_dvmczNWZl" class="btn"
+       onclick="fbq('track','Lead');">
+        ✈️ Join Telegram
+    </a>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>What Our Members Say</h2>
-                <p>Join thousands of satisfied Aviator players who have improved their game</p>
-            </div>
-            
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "This Telegram channel completely changed how I approach Aviator. The strategies shared here helped me develop a much more disciplined approach to the game."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">RK</div>
-                        <div>
-                            <h4>Rahul K.</h4>
-                            <p>Member for 3 months</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "I was struggling with consistent losses until I joined this community. The daily insights and community support made a huge difference in my results."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SP</div>
-                        <div>
-                            <h4>Sophia P.</h4>
-                            <p>Member for 5 months</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "The real-time alerts and pattern analysis are invaluable. This is by far the most useful resource I've found for Aviator strategy discussions."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">AM</div>
-                        <div>
-                            <h4>Arun M.</h4>
-                            <p>Member for 2 months</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- CTA 2 -->
+    <a href="https://t.me/+BOQcac_dvmczNWZl" class="btn"
+       onclick="fbq('track','Lead');">
+        ✈️ Join Telegram
+    </a>
 
-    <!-- Disclaimer -->
-    <section class="disclaimer container">
-        <p><strong>Important Disclaimer:</strong> Our Telegram channel provides strategy discussions and community insights only. We do not guarantee winnings or encourage irresponsible gambling. Please play responsibly and within your limits. Our community is for educational and discussion purposes only.</p>
-    </section>
+    <div class="sub">Start Learning Today!</div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-rocket"></i> Aviator Insights
-                </div>
-                <p style="max-width: 600px; opacity: 0.8; margin-bottom: 20px;">
-                    Join our exclusive Telegram community for Aviator game strategies, insights, and discussions with experienced players.
-                </p>
-                
-                <div class="footer-links">
-                    <a href="https://t.me/+BOQcac_dvmczNWZl" onclick="fbq('track', 'Lead');">Telegram Channel</a>
-                    <a href="#" onclick="return false;">Privacy Policy</a>
-                    <a href="#" onclick="return false;">Terms of Service</a>
-                </div>
-                
-                <div style="margin: 30px 0;">
-                    <a href="https://t.me/+BOQcac_dvmczNWZl" class="cta-button" id="telegram-btn-footer" onclick="fbq('track', 'Lead');">
-                        <i class="fab fa-telegram telegram-icon"></i>
-                        Join 1,500+ Members Now
-                    </a>
-                </div>
-                
-                <div class="copyright">
-                    &copy; 2023 Aviator Insights. This is an independent community for strategy discussion only.
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div class="timer">
+        Redirecting to Telegram in <b>3 seconds...</b>
+    </div>
 
-    <script>
-        // Countdown Timer
-        function updateCountdown() {
-            const now = new Date();
-            const target = new Date();
-            target.setHours(23, 59, 59, 999);
-            
-            const diff = target - now;
-            
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            document.getElementById('days').textContent = days.toString().padStart(2, '0');
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-        }
-        
-        // Update countdown every second
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-        
-        // Track all CTA button clicks with Meta Pixel
-        document.querySelectorAll('a[href="https://t.me/+BOQcac_dvmczNWZl"]').forEach(button => {
-            button.addEventListener('click', function() {
-                fbq('track', 'Lead', {
-                    content_name: 'Telegram Channel Join',
-                    status: 'clicked'
-                });
-            });
-        });
-        
-        // Track page view event for specific sections
-        const observerOptions = {
-            threshold: 0.5
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const sectionId = entry.target.id || entry.target.className;
-                    fbq('track', 'ViewContent', {
-                        content_name: sectionId,
-                        content_category: 'section_view'
-                    });
-                }
-            });
-        }, observerOptions);
-        
-        // Observe main sections
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-        
-        // Track time spent on page
-        let timeSpent = 0;
-        setInterval(() => {
-            timeSpent++;
-            if (timeSpent === 30) {
-                fbq('track', 'CompleteRegistration', {
-                    content_name: '30_seconds_on_page',
-                    value: timeSpent
-                });
-            }
-        }, 1000);
-    </script>
+    <div class="disclaimer">
+        <strong>Disclaimer:</strong><br>
+        This Telegram channel is for educational and discussion purposes only.
+        No guarantees or financial advice are provided.
+        Please participate responsibly.
+    </div>
+
+</div>
 </body>
 </html>
